@@ -1,18 +1,29 @@
 <template>
   <div class="swiper-container appSwiper">
     <div class="swiper-wrapper">
-        <div class="swiper-slide">
-
+        <div class="swiper-slide" v-for="item in list">
+          <a href="javascript:;">
+            <img :src="item.src" :style="{height:height}">
+          </a>
         </div>
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination" :class="classpage" v-if="showpage"></div>
   </div>
 </template>
 
 <script>
 import Swiper from "swiper";
+
 export default {
+  ready() {
+    let me = this;
+    if (!(me.list && me.list.length === 0)) {
+      me.renderSwiper();
+    }
+  },
   methods: {
+    /**背景图片路径 */
+    buildBackgroundUrl() {},
     renderSwiper() {
       let me = this;
       me.swiper = new Swiper(me.$el, {
@@ -69,13 +80,18 @@ export default {
       type: String,
       default: "200px"
     }
+  },
+  watch: {
+    list: function(val) {
+      this.renderSwiper();
+    }
   }
 };
 </script>
 
 <style>
 .appSwiper {
-  widows: 100%;
+  width: 100%;
 }
 
 .swiper-slide {
@@ -92,6 +108,14 @@ export default {
   align-items: center;
   background: center no-repeat;
   background-size: cover;
+}
+
+.swiper-slide a {
+  display: block;
+}
+
+.swiper-slide img {
+  width: 100%;
 }
 </style>
 

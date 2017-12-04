@@ -8,18 +8,26 @@
 
 		<!-- 导航 -->
 		<navbar></navbar>
+
+		<!-- loading -->
+		<loading :show="loadshow"></loading>
+
 	</div>
 </template>
 
 <script>
 import Navbar from "./views/common/Navbar.vue";
+import Loading from "./components/Loading.vue";
 
 export default {
-  data() {
-    return {};
-  },
+	data(){
+		return {
+			loadshow:false
+		}
+	},
   components: {
-    Navbar
+    Navbar,
+		Loading
   }
 };
 </script>

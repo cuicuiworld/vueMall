@@ -39,6 +39,7 @@
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.15.0",
+    "mockjs": "^1.0.1-beta3",
     "node-libs-browser": "^0.5.3",
     "node-sass": "^3.4.2",
     "path": "^0.12.7",
