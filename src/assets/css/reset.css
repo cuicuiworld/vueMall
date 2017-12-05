@@ -329,23 +329,6 @@ img {
     }
 }
 
-@font-face {
-    font-family: 'iconfont';  /* project id 492256 */
-    src: url('//at.alicdn.com/t/font_492256_2fhzlkl7k8x5hfr.eot');
-    src: url('//at.alicdn.com/t/font_492256_2fhzlkl7k8x5hfr.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_492256_2fhzlkl7k8x5hfr.woff') format('woff'),
-    url('//at.alicdn.com/t/font_492256_2fhzlkl7k8x5hfr.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_492256_2fhzlkl7k8x5hfr.svg#iconfont') format('svg');
-  }
-
-.icon {
-    font-family: "iconfont" !important;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .v-flexbox {
     width: 100%;
     text-align: center;

@@ -19,15 +19,18 @@
 import Navbar from "./views/common/Navbar.vue";
 import Loading from "./components/Loading.vue";
 
+import { mapGetters, mapMutations, mapActions } from "vuex";
+import { getLocalStorage } from "@/config/cache";
+
 export default {
-	data(){
-		return {
-			loadshow:false
-		}
-	},
+  data() {
+    return {
+      loadshow: false
+    };
+  },
   components: {
     Navbar,
-		Loading
+    Loading
   }
 };
 </script>

@@ -3,11 +3,11 @@
   <nav class="app-nav">
     <div class="nav-bar">
       <a class="bar-item" v-link="{path:'home'}">
-        <i class="icon">&#xe65f;</i>
+        <i class="iconfont">&#xe65f;</i>
         <p>呆逗商城</p>
       </a>
       <a class="bar-item" v-link="{path:'partnermall'}">
-        <i class="icon icon_partner">&#xe649;</i>
+        <i class="iconfont icon_partner">&#xe649;</i>
         <p>合作商城</p>
       </a>
     </div>
@@ -15,6 +15,7 @@
 </template>
 
 <<script>
+import '../../assets/font/iconfont.css';
 export default {}
 </script>
 
@@ -59,7 +60,7 @@ export default {}
   text-align: center;
 }
 
-.app-nav .icon {
+.app-nav .iconfont {
   font-size: 16px;
   margin-top: 5px;
   display: block;

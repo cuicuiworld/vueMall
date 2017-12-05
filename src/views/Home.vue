@@ -11,14 +11,22 @@
         <div class="tab-menu v-flexbox" v-if="!loading">
           <div class="tab-item v-flexbox-item" v-for="item in tablist">
             <a>
-              <i class="icon">{{item.iconUrl}}</i>
+              <i class="iconfont" v-html="item.iconUrl"></i>
               <div>{{item.title}}</div>
             </a>
           </div>
         </div>
 
+        <!-- content -->
+        <section v-if="!loading">
+
+        </section>
+
         <!-- loading -->
         <loading :show="loading"></loading>
+
+         <!--模态框-->
+        <globalmodal :globalmodal.sync="globalModal"></globalmodal>
 
     </div>
 </template>
@@ -28,6 +36,7 @@ import AppHeader from "./common/Header.vue";
 import Banner from "../components/banner.vue";
 import Loading from "../components/Loading.vue";
 import Globalmodal from "../components/globalmodal.vue";
+import '../assets/font/iconfont.css';
 
 import Mock from "mockjs";
 
@@ -194,6 +203,9 @@ export default {
   transform-origin: 0 0;
 }
 
+.tab-item a{
+  display: block;
+}
 </style>
 
 

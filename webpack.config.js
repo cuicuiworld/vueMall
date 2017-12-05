@@ -37,7 +37,11 @@ if (production) {
     utils.deleteFolder(__dirname + "/output/static/");
 
     //压缩
-    plugins.push(new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }));
+    plugins.push(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        }
+    }));
 
     // 生成模板文件
     plugins.push(new HtmlWebpackPlugin({
@@ -94,6 +98,10 @@ module.exports = {
                     limit: 10000,
                     name: 'images/[name].[ext]?[hash:10]'
                 }
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+                loader: 'file-loader'
             }
         ]
     },
@@ -112,7 +120,10 @@ module.exports = {
 
     // 自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名,require('file') 代替 require('file.coffee')
     resolve: {
-        extensions: ['', '.js', '.vue', '.coffee']
+        extensions: ['', '.js', '.vue', '.coffee'],
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+        }
     },
 
     // Create Sourcemaps for the bundle
