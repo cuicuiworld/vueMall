@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import Navbar from "./views/common/Navbar.vue";
-import Loading from "./components/Loading.vue";
+import Navbar from "@/views/common/Navbar.vue";
+import Loading from "@/components/Loading.vue";
 
 import { mapGetters, mapMutations, mapActions } from "vuex";
 import { getLocalStorage } from "@/config/cache";

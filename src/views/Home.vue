@@ -32,11 +32,11 @@
 </template>
 
 <script>
-import AppHeader from "./common/Header.vue";
-import Banner from "../components/banner.vue";
-import Loading from "../components/Loading.vue";
-import Globalmodal from "../components/globalmodal.vue";
-import '../assets/font/iconfont.css';
+import AppHeader from "@/views/common/Header.vue";
+import Banner from "@/components/banner.vue";
+import Loading from "@/components/Loading.vue";
+import Globalmodal from "@/components/globalmodal.vue";
+import '@/assets/font/iconfont.css';
 
 import Mock from "mockjs";
 
